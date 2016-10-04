@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1475577812 source:e:\cpp projects\student_info_db\exercises_cpp.git\chapter 6 split\main.cpp
+	<iostream>
+	<vector>
+	<string>
+	"split.h"
+
+1475577777 e:\cpp projects\student_info_db\exercises_cpp.git\chapter 6 split\split.h
+
