@@ -23,7 +23,7 @@ Grammar read_grammar(std::istream& in) {
 		vector<string> entry = split(line);
 		if (!entry.empty()) {
 			//сохраняем правила в мэп Grammar
-			ret[entry[0]].push_back(Rule(entry.begin() + 1, entry.end()));
+			rE:\cpp projects\Student_info_db\Exercises_CPP.git\Chapter 7\7.6\main.cppet[entry[0]].push_back(Rule(entry.begin() + 1, entry.end()));
 		}
 	}
 	return ret;
@@ -45,15 +45,15 @@ bool bracketed(const string& s) {
 //функция замены по правилу использует рекурсивный вызов
 
 void gen_aux(const Grammar& g, const string& word, vector<string>& ret) {
-
-	vector<string> stack_vec.push_back(word);
+    vector<string> stack_vec;
+	stack_vec.push_back(word);
 	string temp;
 	while (!stack_vec.empty()) {
         // Копируем из вектора последний элемент и удаляем его
         temp = stack_vec.back();
         stack_vec.pop_back();
         if (!bracketed(temp))
-            stack_vec.push_back(temp);
+            ret.push_back(temp);
         else
         {
             //Ищем соответсвующее правило для значения word
@@ -65,8 +65,9 @@ void gen_aux(const Grammar& g, const string& word, vector<string>& ret) {
             //из которых случайно выбираем одно
             const Rule& r = c[nrand(c.size())];
             Rule::const_reverse_iterator iter;
-            //
-            for (iter = r.rbegin(); r != r.rend(); ++iter)
+            // Запихиваем найденное правило в стэк в обратном порядке,
+            // т.к. доступ к элементам стэка происходит с конца.
+            for (iter = r.rbegin(); iter != r.rend(); ++iter)
             {
                 stack_vec.push_back(*iter);
             }

@@ -45,19 +45,19 @@ bool bracketed(const string& s) {
 //функция замены по правилу использует рекурсивный вызов
 
 void gen_aux(const Grammar& g, const string& word, vector<string>& ret) {
-
-	vector<string> stack_vec.push_back(word);
+    vector<string> stack_vec;
+	stack_vec.push_back(word);
 	string temp;
 	while (!stack_vec.empty()) {
         // Копируем из вектора последний элемент и удаляем его
         temp = stack_vec.back();
         stack_vec.pop_back();
         if (!bracketed(temp))
-            stack_vec.push_back(temp);
+            ret.push_back(temp);
         else
         {
             //Ищем соответсвующее правило для значения word
-            Grammar::const_iterator it = g.find(word);
+            Grammar::const_iterator it = g.find(temp);
             if (it == g.end())
 			throw std::logic_error("Пустое правило");
             //Считываем набор возможных правил
@@ -67,7 +67,7 @@ void gen_aux(const Grammar& g, const string& word, vector<string>& ret) {
             Rule::const_reverse_iterator iter;
             // Запихиваем найденное правило в стэк в обратном порядке,
             // т.к. доступ к элементам стэка происходит с конца.
-            for (iter = r.rbegin(); r != r.rend(); ++iter)
+            for (iter = r.rbegin(); iter != r.rend(); ++iter)
             {
                 stack_vec.push_back(*iter);
             }

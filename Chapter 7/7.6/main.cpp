@@ -6,7 +6,7 @@
 // Sentence_gen.cpp: определяет точку входа для консольного приложения.
 //
 
-#include "stdafx.h"
+
 #include <string>
 #include <vector>
 #include <iostream>
@@ -19,10 +19,14 @@ using std::vector; using std::string;
 
 int main()
 {
-	srand(time(nullptr));
+	srand(time(NULL));
+	// Загружаем грамматику
 	std::cout << " Enta ur rulezz " << std::endl << std::endl;
+	Grammar grmmr = read_grammar(std::cin);
+	std::cin.clear();
+	while (true) {
 	// Генерируем предложение
-	vector<string> sentence = gen_sentence(read_grammar(std::cin));
+	vector<string> sentence = gen_sentence(grmmr);
 	// Выводим первое слово
 	vector<string>::const_iterator it = sentence.begin();
 	if (!sentence.empty()) {
@@ -37,7 +41,15 @@ int main()
 		++it;
 	}
 	std::cout << std::endl;
+	std::cout << "Would you like to try again?";
+	char n;
+	std::cin >> n;
+	if (n == 'n')
+        return 0;
+    //else
+    //    system("pause");
+	}
 	system("pause");
-    return 0;
+	return 0;
 }
 

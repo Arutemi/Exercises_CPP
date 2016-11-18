@@ -5,12 +5,13 @@
 #include <string>
 #include <vector>
 
-//Структура включает имя, оценки в середине и конце семестра и оценки за домашнюю работу
+//пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 struct Student_info
 {
 	std::string name;
 	double midterm, final;
-	std:: vector<double> homework;
+	std::vector<double> homework;
+	double final_grade;
 };
 
 bool compare(const Student_info&, const Student_info&);
