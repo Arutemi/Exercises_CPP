@@ -36,7 +36,7 @@ int main()
 	//Проверяем есть ли элементы в контейнерах
 	if (did.empty())
 	{
-		cout << "Nobody did all homework. What a bunch of loosers." << endl;
+		cout << "Nobody did all homework. What a bunch of losers." << endl;
 		return 1;
 	}
 	if (didnt.empty())
