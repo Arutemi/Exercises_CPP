@@ -1,0 +1,42 @@
+# depslib dependency file v1.0
+1479280407 source:e:\cpp projects\student_info_db\exercises_cpp.git\chapter 7\7.6\gen_sentence.cpp
+	<vector>
+	<string>
+	<map>
+	<iostream>
+	"split.h"
+	<stdexcept>
+	"nrand.h"
+	"gen_sentence.h"
+
+1479268230 e:\cpp projects\student_info_db\exercises_cpp.git\chapter 7\7.6\split.h
+	<vector>
+	<string>
+
+1479268230 e:\cpp projects\student_info_db\exercises_cpp.git\chapter 7\7.6\nrand.h
+
+1479268230 e:\cpp projects\student_info_db\exercises_cpp.git\chapter 7\7.6\gen_sentence.h
+	<string>
+	<vector>
+	<map>
+	<iostream>
+
+1479281328 source:e:\cpp projects\student_info_db\exercises_cpp.git\chapter 7\7.6\main.cpp
+	<string>
+	<vector>
+	<iostream>
+	"gen_sentence.h"
+	<cstdlib>
+	<ctime>
+
+1479188151 source:e:\cpp projects\student_info_db\exercises_cpp.git\chapter 7\7.6\nrand.cpp
+	<cstdlib>
+	<stdexcept>
+	"nrand.h"
+
+1479188151 source:e:\cpp projects\student_info_db\exercises_cpp.git\chapter 7\7.6\split.cpp
+	<vector>
+	<string>
+	<algorithm>
+	"split.h"
+
